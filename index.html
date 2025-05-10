@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websites para Clínicas de Estética | 50€/mês</title>
+    <meta name="description" content="Websites profissionais para clínicas de estética. Galeria antes/depois, avaliações Google, WhatsApp integrado. Apenas 50€/mês.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1E1E1E;
+            background-color: #F5EFD3;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Unbounded', cursive;
+            color: #CC5500;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #F5EFD3;
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e0dac0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .logo {
+            font-family: 'Unbounded', cursive;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #CC5500;
+        }
+        
+        .language-selector {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 1px solid #CC5500;
+            color: #CC5500;
+            padding: 5px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-btn.active {
+            background: #CC5500;
+            color: #F5EFD3;
+        }
+        
+        .lang-btn:hover:not(.active) {
+            background: #CC5500;
+            color: #F5EFD3;
+        }
+        
+        .cta-button {
+            background: #CC5500;
+            color: #F5EFD3;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .cta-button:hover {
+            background: #b34a00;
+            transform: translateY(-2px);
+        }
+        
+        main {
+            margin-top: 80px;
+        }
+        
+        .hero {
+            padding: 120px 0;
+            text-align: center;
+            background: #F5EFD3;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #1E1E1E;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
+        .price-tag {
+            font-size: 3rem;
+            color: #CC5500;
+            margin: 2rem 0;
+            font-weight: 600;
+        }
+        .statistics {
+    padding: 80px 0;
+    background: #F5EFD3;
+    border-top: 1px solid #e0dac0;
+    border-bottom: 1px solid #e0dac0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.stat-number {
+    font-family: 'Unbounded', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #CC5500;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.stat-text {
+    font-size: 1.1rem;
+    color: #1E1E1E;
+    font-weight: 600;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.stats-conclusion {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #CC5500;
+    font-weight: 500;
+    font-family: 'Unbounded', cursive;
+}
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 0;
+            background: #F5EFD3;
+        }
+        
+        .portfolio h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        
+        .portfolio-subtitle {
+            text-align: center;
+            color: #1E1E1E;
+            margin-bottom: 4rem;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        
+        .mockup-card {
+            background: #F5EFD3;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        
+        .mockup-card:hover {
+            border-color: #CC5500;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(204, 85, 0, 0.1);
+        }
+        
+        .mockup-image {
+            width: 100%;
+            height: 300px;
+            background: #e0dac0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mockup-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .mockup-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .mockup-placeholder h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mockup-placeholder p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .mockup-info {
+            padding: 2rem;
+        }
+        
+        .mockup-info h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .mockup-info p {
+            color: #1E1E1E;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        
+        .mockup-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .feature-tag {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            border: 1px solid #e0dac0;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: #F5EFD3;
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+        }
+        
+        .feature-card {
+            background: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(30, 30, 30, 0.05);
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            text-align: center;
+            background: #FFFFFF;
+        }
+        
+        .pricing h2 {
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card {
+            background: #F5EFD3;
+            border-radius: 30px;
+            padding: 3rem;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 3.5rem;
+            color: #CC5500;
+            margin: 1.5rem 0;
+            font-weight: 700;
+        }
+        
+        .price small {
+            font-size: 1rem;
+            color: #1E1E1E;
+            font-weight: 400;
+        }
+        
+        .setup-fee {
+            color: #1E1E1E;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .included {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        
+        .included li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0dac0;
+            font-weight: 300;
+        }
+        
+        .included li:last-child {
+            border-bottom: none;
+        }
+        
+        .included li:before {
+            content: "✓ ";
+            color: #CC5500;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #CC5500;
+            color: #F5EFD3;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            margin-bottom: 2rem;
+            color: #F5EFD3;
+            font-size: 2.5rem;
+        }
+        
+        .contact p {
+            color: #F5EFD3;
+        }
+        
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .whatsapp-button {
+            display: inline-block;
+            background: #F5EFD3;
+            color: #CC5500;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .whatsapp-button:hover {
+            background: #FFFFFF;
+            transform: translateY(-2px);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 30, 30, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90vh;
+            position: relative;
+        }
+        
+        .modal-image {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: -45px;
+            right: 0;
+            color: #F5EFD3;
+            font-size: 2.5rem;
+            cursor: pointer;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            color: #CC5500;
+        }
+        
+        footer {
+            background: #F5EFD3;
+            color: #CC5500;
+            text-align: center;
+            padding: 2rem 0;
+            font-weight: 300;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+            
+            .nav-left {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .stat-number {
+        font-size: 3rem;
+    }
+    
+    .stat-text {
+        font-size: 1rem;
+    }
+    
+    .stats-conclusion {
+        font-size: 1.1rem;
+    }
+    
+    .statistics {
+        padding: 60px 0;
+    }
+            .price-tag {
+                font-size: 2.5rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .feature-card {
+                padding: 2rem;
+            }
+            
+            .pricing-card {
+                padding: 2rem;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
+            
+            .portfolio h2,
+            .features h2,
+            .pricing h2,
+            .contact h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero {
+                padding: 180px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .whatsapp-button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+            
+            .portfolio,
+            .features,
+            .pricing,
+            .contact {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left">
+                <div class="logo">Mara Pereira</div>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                </div>
+            </div>
+            <a href="https://wa.me/351910222220?text=Olá!%20Tenho%20interesse%20no%20website%20para%20clínicas" class="cta-button" data-translate="nav_contact">Contactar Agora</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 data-translate="hero_title">Websites para Clínicas de Estética</h1>
+                <p data-translate="hero_subtitle">Mostre resultados que convencem. Converta visitantes em clientes com um website profissional e otimizado.</p>
+                <div class="price-tag" data-translate="price_tag">50€/mês</div>
+                <p data-translate="price_info">Tudo incluído. Transparência total.</p>
+                <a href="#portfolio" class="cta-button" data-translate="see_examples">Ver Exemplos</a>
+            </div>
+        </section>
+        <!-- Adicionar após a seção hero e antes da seção portfolio -->
+<section class="statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">87%</div>
+                <p class="stat-text" data-translate="stat1_text">das pessoas pesquisam online antes de escolher uma clínica estética</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">76%</div>
+                <p class="stat-text" data-translate="stat2_text">querem ver resultados de antes/depois antes de marcar consulta</p>
+            </div>
+        </div>
+        <p class="stats-conclusion" data-translate="stats_conclusion">O seu website é o primeiro ponto de contacto com potenciais clientes</p>
+    </div>
+</section>
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2 data-translate="portfolio_title">Exemplos de Websites</h2>
+                <p class="portfolio-subtitle" data-translate="portfolio_subtitle">Designs modernos e funcionais para a sua clínica</p>
+                
+                <div class="gallery">
+                    <div class="mockup-card" >
+                        <div class="mockup-image"> 
+                            <img src="./assets/clinica1.png" alt="Mockup Clínica Moderna" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="mockup-info">
+                            <h3 data-translate="design_premium">Design Premium</h3>
+                            <p data-translate="design_premium_desc">Layout moderno com foco em resultados e conversão de visitantes</p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="https://wp.hixstudio.net/vamary/home-2/" target="_blank" class="cta-button" style="display: block; text-align: center; padding: 12px 20px;">
+                                    <span data-translate="view_live">Ver Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-card" >
+                        <div class="mockup-image">
+                            <img src="./assets/clinica2.png" alt="Mockup Clínica Moderna" style="width: 100%; height: 100%; object-fit: cover;">
+
+                        </div>
+                        <div class="mockup-info">
+                            <h3 data-translate="design_elegant">Design Elegante</h3>
+                            <p data-translate="design_elegant_desc">Interface clean e intuitiva que facilita a navegação</p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="https://wp.hixstudio.net/vamary/home-6/#" target="_blank" class="cta-button" style="display: block; text-align: center; padding: 12px 20px;">
+                                    <span data-translate="view_live">Ver Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-card" onclick="openModal(3)">
+                        <div class="mockup-image">
+                            <img src="./assets/clinica3.png" alt="Mockup Clínica Moderna" style="width: 100%; height: 100%; object-fit: cover;">
+
+                        </div>
+                        <div class="mockup-info">
+                            <h3 data-translate="design_modern">Design Moderno</h3>
+                            <p data-translate="design_modern_desc">Visual contemporâneo focado em usabilidade e conversão</p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="https://wp.hixstudio.net/vamary/home-5/" target="_blank" class="cta-button" style="display: block; text-align: center; padding: 12px 20px;">
+                                    <span data-translate="view_live">Ver Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-card" onclick="openModal(4)">
+                        <div class="mockup-image">
+                            <img src="./assets/clinica4.png" alt="Mockup Clínica Moderna" style="width: 100%; height: 100%; object-fit: cover;">
+
+                        </div>
+                        <div class="mockup-info">
+                            <h3 data-translate="design_minimalist">Design Minimalista</h3>
+                            <p data-translate="design_minimalist_desc">Simplicidade que valoriza o conteúdo e facilita a ação</p>
+                            <div style="margin-top: 1.5rem;">
+                                <a href="https://demo-clinica-moderna.vercel.app" target="_blank" class="cta-button" style="display: block; text-align: center; padding: 12px 20px;">
+                                    <span data-translate="view_live">Ver Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="modal" class="modal" onclick="closeModal()">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <img id="modal-image" class="modal-image" src="" alt="Mockup">
+            </div>
+        </div>
+        
+        <section class="features">
+            <div class="container">
+                <h2 data-translate="features_title">O Que Está Incluído</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3 data-translate="feature1_title">Galeria Antes/Depois</h3>
+                        <p data-translate="feature1_desc">Resultados organizados por serviço. Botox, preenchimentos, tratamentos faciais - tudo categorizado para fácil navegação.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-translate="feature2_title">Avaliações Google</h3>
+                        <p data-translate="feature2_desc">Integração automática das suas avaliações 5 estrelas. Prova social que aumenta a confiança dos visitantes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-translate="feature3_title">Contacto Facilitado</h3>
+                        <p data-translate="feature3_desc">WhatsApp direto, formulários intuitivos e integração com sistemas de marcação como Fresha.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-translate="feature4_title">SEO Otimizado</h3>
+                        <p data-translate="feature4_desc">Apareça nos primeiros resultados do Google quando procuram serviços na sua área.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-translate="feature5_title">Design Responsivo</h3>
+                        <p data-translate="feature5_desc">Perfeito em qualquer dispositivo. 70% dos clientes pesquisam em smartphones.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3 data-translate="feature6_title">Suporte Completo</h3>
+                        <p data-translate="feature6_desc">Atualizações ilimitadas, backups automáticos e suporte técnico sempre disponível.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pricing">
+            <div class="container">
+                <h2 data-translate="pricing_title">Investimento Transparente</h2>
+                <div class="pricing-card">
+                    <h3 data-translate="plan_complete">Plano Completo</h3>
+                    <div class="price" data-translate="price">50€ <small>/mês</small></div>
+                    <ul class="included">
+                        <li data-translate="included1">Domínio personalizado incluído</li>
+                        <li data-translate="included2">Alojamento rápido e seguro</li>
+                        <li data-translate="included3">Certificado SSL (https)</li>
+                        <li data-translate="included4">Design personalizado</li>
+                        <li data-translate="included5">Galeria antes/depois </li>
+                        <li data-translate="included6">Integração Google Reviews</li>
+                        <li data-translate="included7">Formulários e WhatsApp</li>
+                        <li data-translate="included8">Otimização SEO completa</li>
+                        <li data-translate="included9">Atualizações ilimitadas</li>
+                        <li data-translate="included10">Entrega em 1 semana</li>
+                    </ul>
+                    <a href="https://wa.me/351910222220?text=Olá!%20Tenho%20interesse%20no%20website%20para%20clínicas." class="cta-button" data-translate="start_now">Começar Agora</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 data-translate="contact_title">Transforme a Sua Presença Online</h2>
+                <p class="contact-info" data-translate="contact_subtitle">Contacte-nos para começar a atrair mais clientes</p>
+                <p class="contact-info">📞 +351 910222220</p>
+                <p class="contact-info">✉️ webdesignmara@gmail.com
+                </p>
+                <a href="https://wa.me/351910222220?text=Olá!%20Tenho%20interesse%20no%20website%20para%20clínicas." class="whatsapp-button" data-translate="whatsapp_button">
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p data-translate="footer_text">&copy; 2025 Mara Pereira | Web Design. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Traduções
+        const translations = {
+            pt: {
+                nav_contact: "Contactar Agora",
+                hero_title: "Websites para Clínicas de Estética",
+                hero_subtitle: "Mostre resultados que convencem. Converta visitantes em clientes com um website profissional e otimizado.",
+                price_tag: "50€/mês",
+                price_info: "Tudo incluído. Transparência total.",
+                see_examples: "Ver Exemplos",
+                portfolio_title: "Exemplos de Websites",
+                portfolio_subtitle: "Designs modernos e funcionais para a sua clínica",
+                clinic_premium: "Clínica Premium",
+                clinic_elegant: "Clínica Elegante",
+                clinic_modern: "Clínica Moderna",
+                clinic_minimalist: "Clínica Minimalista",
+                click_view: "Clique para visualizar",
+                design_premium: "Design Premium",
+                design_premium_desc: "Layout moderno com foco em resultados e conversão de visitantes",
+                design_elegant: "Design Elegante",
+                design_elegant_desc: "Interface clean e intuitiva que facilita a navegação",
+                design_modern: "Design Moderno",
+                design_modern_desc: "Visual contemporâneo focado em usabilidade e conversão",
+                design_minimalist: "Design Minimalista",
+                design_minimalist_desc: "Simplicidade que valoriza o conteúdo e facilita a ação",
+                tag_beforeafter: "Antes/Depois",
+                stat1_text: "das pessoas pesquisam online antes de escolher uma clínica estética",
+                stat2_text: "querem ver resultados de antes/depois antes de marcar consulta",
+                stats_conclusion: "O seu website é o primeiro ponto de contacto com potenciais clientes",
+                tag_forms: "Formulários",
+                tag_responsive: "Responsivo",
+                tag_fast: "Rápido",
+                tag_professional: "Profissional",
+                tag_clean: "Clean",
+                tag_focused: "Focado",
+                tag_effective: "Eficaz",
+                features_title: "O Que Está Incluído",
+                feature1_title: "Galeria Antes/Depois",
+                feature1_desc: "Resultados organizados por serviço. Botox, preenchimentos, tratamentos faciais - tudo categorizado para fácil navegação.",
+                feature2_title: "Avaliações Google",
+                feature2_desc: "Integração automática das suas avaliações 5 estrelas. Prova social que aumenta a confiança dos visitantes.",
+                feature3_title: "Contacto Facilitado",
+                feature3_desc: "WhatsApp direto, formulários intuitivos e integração com sistemas de marcação como Fresha.",
+                feature4_title: "SEO Otimizado",
+                feature4_desc: "Apareça nos primeiros resultados do Google quando procuram serviços na sua área.",
+                feature5_title: "Design Responsivo",
+                feature5_desc: "Perfeito em qualquer dispositivo. 70% dos clientes pesquisam em smartphones.",
+                feature6_title: "Suporte Completo",
+                feature6_desc: "Atualizações ilimitadas, backups automáticos e suporte técnico sempre disponível.",
+                pricing_title: "Investimento Transparente",
+                plan_complete: "Plano Completo",
+                price: "50€ <small>/mês</small>",
+                included1: "Domínio personalizado incluído",
+                included2: "Alojamento rápido e seguro",
+                included3: "Certificado SSL (https)",
+                included4: "Design personalizado",
+                included5: "Galeria antes/depois ilimitada",
+                included6: "Integração Google Reviews",
+                included7: "Formulários e WhatsApp",
+                included8: "Otimização SEO completa",
+                included9: "Atualizações ilimitadas",
+                included10: "Entrega em 1 semana",
+                start_now: "Começar Agora",
+                contact_title: "Transforme a Sua Presença Online",
+                contact_subtitle: "Contacte-nos para começar a atrair mais clientes",
+                whatsapp_button: "Falar no WhatsApp",
+                    footer_text: "&copy; 2025 Mara Pereira| Web Design. Todos os direitos reservados."
+                },
+            en: {
+                nav_contact: "Contact Now",
+                hero_title: "Websites for Aesthetic Clinics",
+                hero_subtitle: "Show convincing results. Convert visitors into clients with a professional and optimized website.",
+                price_tag: "50€/month",
+                price_info: "All included. Total transparency.",
+                see_examples: "See Examples",
+                portfolio_title: "Website Examples",
+                portfolio_subtitle: "Modern and functional designs for your clinic",
+                clinic_premium: "Premium Clinic",
+                clinic_elegant: "Elegant Clinic",
+                clinic_modern: "Modern Clinic",
+                clinic_minimalist: "Minimalist Clinic",
+                click_view: "Click to view",
+                design_premium: "Premium Design",
+                design_premium_desc: "Modern layout focused on results and visitor conversion",
+                design_elegant: "Elegant Design",
+                design_elegant_desc: "Clean and intuitive interface that facilitates navigation",
+                design_modern: "Modern Design",
+                design_modern_desc: "Contemporary visual focused on usability and conversion",
+                design_minimalist: "Minimalist Design",
+                design_minimalist_desc: "Simplicity that values content and facilitates action",
+                tag_beforeafter: "Before/After",
+                tag_forms: "Forms",
+                tag_responsive: "Responsive",
+                tag_fast: "Fast",
+                tag_professional: "Professional",
+                tag_clean: "Clean",
+                tag_focused: "Focused",
+                tag_effective: "Effective",
+                features_title: "What's Included",
+                feature1_title: "Before/After Gallery",
+                feature1_desc: "Results organized by service. Botox, fillers, facial treatments - all categorized for easy navigation.",
+                feature2_title: "Google Reviews",
+                feature2_desc: "Automatic integration of your 5-star reviews. Social proof that increases visitor trust.",
+                feature3_title: "Easy Contact",
+                feature3_desc: "Direct WhatsApp, intuitive forms and integration with booking systems like Fresha.",
+                feature4_title: "SEO Optimized",
+                feature4_desc: "Appear in the first Google results when searching for services in your area.",
+                feature5_title: "Responsive Design",
+                feature5_desc: "Perfect on any device. 70% of clients search on smartphones.",
+                feature6_title: "Complete Support",
+                feature6_desc: "Unlimited updates, automatic backups and technical support always available.",
+                pricing_title: "Transparent Investment",
+                stat1_text: "of people search online before choosing an aesthetic clinic",
+                stat2_text: "want to see before/after results before booking an appointment",
+                stats_conclusion: "Your website is the first point of contact with potential clients",
+                plan_complete: "Complete Plan",
+                price: "50€ <small>/month</small>",
+                included1: "Custom domain included",
+                included2: "Fast and secure hosting",
+                included3: "SSL Certificate (https)",
+                included4: "Custom design",
+                included5: "Before/after gallery",
+                included6: "Google Reviews integration",
+                included7: "Forms and WhatsApp",
+                included8: "Complete SEO optimization",
+                included9: "Unlimited updates",
+                included10: "Delivery in 1 week",
+                start_now: "Start Now",
+                contact_title: "Transform Your Online Presence",
+                contact_subtitle: "Contact us to start attracting more clients",
+                whatsapp_button: "Chat on WhatsApp",
+                footer_text: "&copy; 2025 Mara Pereira | Web Design. All rights reserved."
+            },
+            es: {
+                nav_contact: "Contactar Ahora",
+                hero_title: "Sitios Web para Clínicas Estéticas",
+                hero_subtitle: "Muestre resultados que convencen. Convierta visitantes en clientes con un sitio web profesional y optimizado.",
+                price_tag: "50€/mes",
+                price_info: "Todo incluido. Transparencia total.",
+                see_examples: "Ver Ejemplos",
+                portfolio_title: "Ejemplos de Sitios Web",
+                portfolio_subtitle: "Diseños modernos y funcionales para su clínica",
+                clinic_premium: "Clínica Premium",
+                clinic_elegant: "Clínica Elegante",
+                clinic_modern: "Clínica Moderna",
+                clinic_minimalist: "Clínica Minimalista",
+                click_view: "Haz clic para ver",
+                design_premium: "Diseño Premium",
+                design_premium_desc: "Diseño moderno enfocado en resultados y conversión de visitantes",
+                design_elegant: "Diseño Elegante",
+                design_elegant_desc: "Interfaz limpia e intuitiva que facilita la navegación",
+                design_modern: "Diseño Moderno",
+                design_modern_desc: "Visual contemporáneo enfocado en usabilidad y conversión",
+                design_minimalist: "Diseño Minimalista",
+                design_minimalist_desc: "Simplicidad que valora el contenido y facilita la acción",
+                tag_beforeafter: "Antes/Después",
+                tag_forms: "Formularios",
+                tag_responsive: "Responsivo",
+                tag_fast: "Rápido",
+                tag_professional: "Profesional",
+                stat1_text: "de las personas buscan online antes de elegir una clínica estética",
+                stat2_text: "quieren ver resultados de antes/después antes de reservar cita",
+                stats_conclusion: "Su sitio web es el primer punto de contacto con clientes potenciales",
+                tag_clean: "Limpio",
+                tag_focused: "Enfocado",
+                tag_effective: "Eficaz",
+                features_title: "Qué Está Incluido",
+                feature1_title: "Galería Antes/Después",
+                feature1_desc: "Resultados organizados por servicio. Botox, rellenos, tratamientos faciales - todo categorizado para una navegación fácil.",
+                feature2_title: "Reseñas de Google",
+                feature2_desc: "Integración automática de sus reseñas de 5 estrellas. Prueba social que aumenta la confianza de los visitantes.",
+                feature3_title: "Contacto Fácil",
+                feature3_desc: "WhatsApp directo, formularios intuitivos e integración con sistemas de reserva como Fresha.",
+                feature4_title: "SEO Optimizado",
+                feature4_desc: "Aparezca en los primeros resultados de Google cuando busquen servicios en su área.",
+                feature5_title: "Diseño Responsivo",
+                feature5_desc: "Perfecto en cualquier dispositivo. El 70% de los clientes buscan en smartphones.",
+                feature6_title: "Soporte Completo",
+                feature6_desc: "Actualizaciones ilimitadas, copias de seguridad automáticas y soporte técnico siempre disponible.",
+                pricing_title: "Inversión Transparente",
+                plan_complete: "Plan Completo",
+                price: "50€ <small>/mes</small>",
+                included1: "Dominio personalizado incluido",
+                included2: "Alojamiento rápido y seguro",
+                included3: "Certificado SSL (https)",
+                included4: "Diseño personalizado",
+                included5: "Galería antes/después",
+                included6: "Integración de Google Reviews",
+                included7: "Formularios y WhatsApp",
+                included8: "Optimización SEO completa",
+                included9: "Actualizaciones ilimitadas",
+                included10: "Entrega en 1 semana",
+                start_now: "Empezar Ahora",
+                contact_title: "Transforme Su Presencia Online",
+                contact_subtitle: "Contáctenos para comenzar a atraer más clientes",
+                whatsapp_button: "Hablar por WhatsApp",
+                footer_text: "&copy; 2025 Mara Pereira | Web Design. Todos los derechos reservados."
+            }
+        };
+
+        // Função para traduzir
+        function translate(lang) {
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                const translation = translations[lang][key];
+                if (translation) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translation;
+                    } else {
+                        element.innerHTML = translation;
+                    }
+                }
+            });
+            
+            // Atualizar idioma do documento
+            document.documentElement.lang = lang;
+            
+            // Atualizar título e descrição
+            if (lang === 'en') {
+                document.title = "Websites for Aesthetic Clinics | 50€/month";
+                document.querySelector('meta[name="description"]').content = "Professional websites for aesthetic clinics. Before/after gallery, Google reviews, integrated WhatsApp. Only 50€/month.";
+            } else if (lang === 'es') {
+                document.title = "Sitios Web para Clínicas Estéticas | 50€/mes";
+                document.querySelector('meta[name="description"]').content = "Sitios web profesionales para clínicas estéticas. Galería antes/después, reseñas de Google, WhatsApp integrado. Solo 50€/mes.";
+            } else {
+                document.title = "Websites para Clínicas de Estética | 50€/mês";
+                document.querySelector('meta[name="description"]').content = "Websites profissionais para clínicas de estética. Galeria antes/depois, avaliações Google, WhatsApp integrado. Apenas 50€/mês.";
+            }
+            
+            // Salvar preferência
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Event listeners para botões de idioma
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('.lang-btn.active').classList.remove('active');
+                this.classList.add('active');
+                translate(this.dataset.lang);
+            });
+        });
+
+        // Carregar idioma preferido ou detectar idioma do navegador
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            const browserLang = navigator.language.slice(0, 2);
+            let defaultLang = 'pt';
+            
+            if (savedLang && ['pt', 'en', 'es'].includes(savedLang)) {
+                defaultLang = savedLang;
+            } else if (['en', 'es'].includes(browserLang)) {
+                defaultLang = browserLang;
+            }
+            
+            if (defaultLang !== 'pt') {
+                document.querySelector('.lang-btn.active').classList.remove('active');
+                document.querySelector(`[data-lang="${defaultLang}"]`).classList.add('active');
+                translate(defaultLang);
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Modal functions
+        function openModal(id) {
+            const modal = document.getElementById('modal');
+            const modalImage = document.getElementById('modal-image');
+            
+            modalImage.src = `mockup-${id}.jpg`;
+            modalImage.alt = `Mockup ${id}`;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
